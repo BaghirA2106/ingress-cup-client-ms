@@ -1,0 +1,22 @@
+server:
+  address: localhost
+  port: 8084
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ingresscupdb
+    username: ingresscupdb
+    password: ingresscupdb
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: mysql
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+
+  liquibase:
+    enabled: true
+    changeLog: "classpath:/db.changelog/db.changelog-master.yaml"

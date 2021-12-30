@@ -22,7 +22,7 @@ public class CoffeeOrderDto {
     private Coffee_Size coffee_size;
     private String special_request;
     private Boolean in_or_out;
-    private LocalDateTime localDateTime;
+    private LocalDateTime dateTime;
     private OrderStatus orderStatus;
 }
 

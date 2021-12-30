@@ -2,6 +2,7 @@ package com.coffeshop.ingresscupclientms.entity;
 
 import com.coffeshop.ingresscupclientms.enums.Coffee_Size;
 import com.coffeshop.ingresscupclientms.enums.Coffee_Type;
+import com.coffeshop.ingresscupclientms.enums.OrderStatus;
 import com.sun.istack.NotNull;
 import jdk.jfr.Description;
 import lombok.AllArgsConstructor;
@@ -20,30 +21,36 @@ import java.time.LocalDateTime;
 @Table(name = CoffeeOrder.TABLE_NAME)
 public class  CoffeeOrder {
 
-    public static final String TABLE_NAME = "Coffee_order";
+    public static final String TABLE_NAME = "Coffee_order_1";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @Column(nullable = false)
     private String nameOnCup;
 
-    @NotNull
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Coffee_Type coffee_type;
 
-    @NotNull
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Coffee_Size coffee_size;
 
-    @Description("This column may be empty")
+    @Column(nullable = false)
     private String special_request;
 
+    @Column(nullable = false)
     @NotNull
     private Boolean in_or_out;
 
-    @NotNull
+    @Column(nullable = false)
     private LocalDateTime localDateTime;
 
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
 
 
 }

@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 0022
-      author: Baghir
+      author: baghirA
       changes:
         - createTable:
             columns:
@@ -14,7 +14,12 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: coffe_type
+                  name: nameOnCup
+                  type: VARCHAR(20)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: coffee_type
                   type: VARCHAR(250)
               - column:
                   constraints:
@@ -22,12 +27,23 @@ databaseChangeLog:
                   name: coffee_size
                   type: VARCHAR(250)
               - column:
+                  constraints:
+                    nullable: false
                   name: special_request
                   type: VARCHAR(250)
               - column:
+                  constraints:
+                    nullable: false
                   name: in_or_out
                   type: boolean
               - column:
-                  name: order_status
+                  constraints:
+                    nullable: false
+                  name: dateTime
+                  type: datetime
+              - column:
+                  constraints:
+                    nullable: false
+                  name: orderStatus
                   type: VARCHAR(250)
-            tableName: coffe_order
+            tableName: Coffee_order_1
