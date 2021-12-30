@@ -5,10 +5,10 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/ingresscupdb
     username: ingresscupdb
     password: ingresscupdb
+    driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: validate
