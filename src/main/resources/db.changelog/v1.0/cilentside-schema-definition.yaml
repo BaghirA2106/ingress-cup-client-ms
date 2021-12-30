@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0022
+      author: Baghir
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: coffe_type
+                  type: VARCHAR(250)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: coffee_size
+                  type: VARCHAR(250)
+              - column:
+                  name: special_request
+                  type: VARCHAR(250)
+              - column:
+                  name: in_or_out
+                  type: boolean
+              - column:
+                  name: order_status
+                  type: VARCHAR(250)
+            tableName: coffe_order
